@@ -1,0 +1,81 @@
+﻿<!--
+// Copyright © Microsoft Corporation.  All Rights Reserved.
+// This code released under the terms of the 
+// Microsoft Public License (MS-PL, http://opensource.org/licenses/ms-pl.html.)    
+-->
+<Page x:Class="MainPage" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:SampleControls="SampleControls"
+        xmlns:y="clr-namespace:WpfApplication1"
+    WindowTitle="Animation Gallery" 
+  Loaded="galleryLoaded"
+  Name="GridSampleViewerPage"
+  SizeChanged="pageSizeChanged" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="689" d:DesignHeight="500">
+<Grid Margin="0,1,0,-1" >
+    
+    <Border Name="SampleGridBorder" 
+      BorderThickness="1" BorderBrush="LightGray"
+      HorizontalAlignment="Stretch">
+            <Grid Name="SampleGrid">
+                <TabControl Name="tab" FontWeight="Bold" FontSize="16" FontFamily="Times New Roman">
+                    </TabControl>
+            </Grid>
+            <Border.RenderTransform>
+        <TranslateTransform x:Name="SampleGridTranslateTransform" X="0" Y="0" />
+      </Border.RenderTransform>
+    </Border>
+
+  
+    <Border Name="SampleDisplayBorder" BorderBrush="Gray" BorderThickness="1"
+      Visibility="Collapsed" Background="#FF0967A8" >
+            <DockPanel 
+        Margin="10"  HorizontalAlignment="Stretch" >
+
+
+        <Button Name="btnBack"
+          DockPanel.Dock="Left"
+          Height="50" Width="50" IsTabStop="False">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images/button back.png"/>
+                    </Button.Background>
+                    <Button.Triggers>
+            <EventTrigger RoutedEvent="Button.Click">
+              <BeginStoryboard HandoffBehavior="SnapshotAndReplace">
+                <Storyboard>
+                    <DoubleAnimation
+                    Storyboard.TargetName="SampleGrid"
+                    Storyboard.TargetProperty="Opacity"
+                    From="0"
+                    To="1" 
+                    BeginTime="0:0:0"
+                    Duration="0:0:1"/>
+                   
+                    <DoubleAnimation
+                    Storyboard.TargetName="SampleGridTranslateTransform"
+                    Storyboard.TargetProperty="X"
+                    From="0"
+                    To="0" 
+                    BeginTime="0:0:0" />                    
+                </Storyboard>
+              </BeginStoryboard>
+            </EventTrigger>
+          </Button.Triggers>
+                </Button>
+        
+        
+        <Frame Name="SampleDisplayFrame" Background="White" 
+          ContentRendered="sampleDisplayFrameLoaded"
+          />
+
+
+      </DockPanel> 
+      <Border.RenderTransform>
+        <TranslateTransform x:Name="SampleDisplayBorderTranslateTransform"
+          X="0" />
+      </Border.RenderTransform>
+    </Border>  
+  </Grid>
+</Page>
+

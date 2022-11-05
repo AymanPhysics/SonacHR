@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="CalcSalary"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="290" d:DesignWidth="603">
+    <Grid Background="{DynamicResource Bg}">
+        <Grid Name="GG" Margin="13,19,14,59">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FF6DD9FF" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" Margin="175,94,325,90" MaxLength="10" x:Name="txtMonth" TabIndex="1" VerticalAlignment="Center" Width="76" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" Margin="175,61,325,123" MaxLength="10" x:Name="TaxAccNo" TabIndex="0" VerticalAlignment="Center" Width="76">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Month" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="44,94,407,90" x:Name="lblFromDate" UseLayoutRounding="True" Width="125" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Year" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="273,94,183,90" x:Name="lblFromDate_Copy" UseLayoutRounding="True" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" Margin="398,94,98,90" MaxLength="10" x:Name="txtYear" TabIndex="2" VerticalAlignment="Center" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" IsReadOnly="True" IsTabStop="False" Margin="257,61,98,123" MaxLength="100" x:Name="TaxAccName" TabIndex="888" VerticalAlignment="Center" Width="221">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="TaxAcc" Foreground="#FF078200" Height="28" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="44,61,407,123" x:Name="lblTaxAcc" UseLayoutRounding="True" VerticalAlignment="Center" Width="125" />
+            <TextBox AutoWordSelection="True" Height="28" HorizontalAlignment="Center" Margin="175,127,325,57" MaxLength="10" x:Name="Perc" TabIndex="1" VerticalAlignment="Center" Width="76" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="النسبة" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="44,127,407,57" x:Name="lblPerc" UseLayoutRounding="True" Width="125" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="%" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="257,127,273,57" x:Name="lblPerc2" UseLayoutRounding="True" Width="46" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Grid>
+        <Button Content="Calculate" HorizontalAlignment="Center"  Name="Button2" TabIndex="20" VerticalAlignment="Bottom" Width="380" Margin="12,0,12,9" Style="{StaticResource GlossyCloseButton}" Height="44" Foreground="Black" Background="{DynamicResource BgSave}"/>
+    </Grid>
+</UserControl>

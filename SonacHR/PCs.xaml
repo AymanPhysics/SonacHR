@@ -1,0 +1,10 @@
+﻿<Window x:Class="PCs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="PCs" Height="151" Width="796" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Margin="12,5,12,87" Name="TextBox1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Center" FontWeight="Bold" IsReadOnly="True" Height="28" Background="#FFFFFEED" />
+        <TextBox Margin="12,37,12,55" x:Name="TextBox2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Center" FontWeight="Bold" Height="28" Background="#FFFFFDCF" />
+        <Button Content="Demo" HorizontalAlignment="Right"  x:Name="btnDemo" TabIndex="3" VerticalAlignment="Bottom" Width="166" Margin="0,0,10,6"  Style="{StaticResource GlossyCloseButton}" Height="45" Foreground="Black" Background="{DynamicResource BgSave}" FontSize="18" IsTabStop="False"/>
+    </Grid>
+</Window>

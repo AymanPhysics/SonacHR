@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="EditMenha"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="342" d:DesignWidth="763">
+    <Grid Background="{DynamicResource Bg}">
+        <Grid Name="GridBackground" Margin="12,12,12,53">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FF8DD8A4" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <CheckBox Content="" Height="16" HorizontalAlignment="Center" Margin="106,90,428,49" Name="CheckBox1" VerticalAlignment="Center" Width="120" Visibility="Hidden" TabIndex="2" />
+            <Image Height="119" HorizontalAlignment="Center" Margin="455,19,99,53" Name="Image1" Source="/SonacHR;component/Images/no.photo.gif" Stretch="Fill" VerticalAlignment="Center" Width="100" Visibility="Hidden" />
+            <Button Content="Change" HorizontalAlignment="Center"  Name="btnSetImage" TabIndex="35" VerticalAlignment="Center" Width="82" Visibility="Hidden" Margin="559,40,13,112">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#B4FF0000" Offset="0" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Cancel" HorizontalAlignment="Center"  Name="btnSetNoImage" TabIndex="35" VerticalAlignment="Center" Width="82" Visibility="Hidden" Margin="559,81,13,55">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#B4FF0000" Offset="0" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TabControl Margin="78,84,71,8" x:Name="TabControl2" UseLayoutRounding="True" VerticalContentAlignment="Stretch" >
+                <TabItem Header="منحة الغلاء" HorizontalAlignment="Left" x:Name="TabItem1" VerticalAlignment="Top">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White" Offset="0" />
+                                <GradientStop Color="#FF8DD8A4" Offset="1" />
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <WindowsFormsHost x:Name="WFH" Background="{x:Null}" TabIndex="333" />
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="290,8,133,0" MaxLength="100" x:Name="CompanyName" TabIndex="1" Width="316" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="الشركة" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="78,8,537,0" x:Name="lblCompanyId" UseLayoutRounding="True" Width="124" HorizontalAlignment="Center" VerticalAlignment="Top"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="207,8,454,0" MaxLength="10" x:Name="CompanyId" TabIndex="8" Width="78" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="المبلغ" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="78,41,537,0" x:Name="lblCompanyId_Copy" UseLayoutRounding="True" Width="124" HorizontalAlignment="Center" VerticalAlignment="Top"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="207,41,454,0" MaxLength="10" x:Name="Value" TabIndex="8" Width="78" HorizontalAlignment="Center" VerticalAlignment="Top" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+        </Grid>
+        <Button Content="Save"  Margin="174,0,334,10" Name="btnSave" TabIndex="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="170" Background="{DynamicResource BgSave}"
+             IsTabStop="False"  />
+        <Button Content="New" HorizontalAlignment="Center"  Margin="350,0,246,10" Name="btnNew" TabIndex="4" VerticalAlignment="Bottom" Width="82" Background="{DynamicResource BgNew}" IsTabStop="False"/>
+        <Button Content="تطبيق"  Margin="362,53,275,0" x:Name="btnSave_Copy" TabIndex="4" VerticalAlignment="Top" HorizontalAlignment="Center" Width="126" Background="{DynamicResource BgSave}"
+        	IsTabStop="False"  />
+    </Grid>
+</UserControl>

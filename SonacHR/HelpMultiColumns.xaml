@@ -1,0 +1,31 @@
+﻿<Window x:Class="HelpMultiColumns"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Help" Height="453" Width="522" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" TabIndex="0" IsManipulationEnabled="True" SnapsToDevicePixels="True" UseLayoutRounding="True" xmlns:my="clr-namespace:WpfApplication1.EmployeeTracker" WindowState="Maximized">
+    <Grid>
+        <Grid Background="{DynamicResource Bg}" Margin="10,12,12,12">
+            <Label FontSize="14" FontWeight="SemiBold" HorizontalContentAlignment="Center" Margin="12,12,12,14" Name="lblMSG" VerticalAlignment="Stretch" VerticalContentAlignment="Center">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#FF6DD9FF" Offset="1" />
+                    </LinearGradientBrush>
+                </Label.Background>
+            </Label>
+            <!--<ScrollViewer Margin="0,77,0,0">-->
+
+            <ScrollViewer SelectiveScrollingGrid.SelectiveScrollingOrientation="Horizontal" Margin="23,76,23,14" VerticalScrollBarVisibility="Disabled">
+                <Grid Margin="0,0,0,0">
+                    <WrapPanel Name="SC" Height="34" VerticalAlignment="Top" Margin="0,5,0,0" ></WrapPanel>
+                <DataGrid  Name="DataGridView1" Margin="0,39,0,0" CanUserSortColumns="True"   
+                               CanUserResizeColumns="True" CanUserReorderColumns="False" CanUserAddRows="False" 
+                               CanUserDeleteRows="False" Foreground="Black" HorizontalScrollBarVisibility="Disabled" 
+                                HorizontalGridLinesBrush="#FF1B78FF" AutoGenerateColumns="True"/>
+                </Grid>
+            </ScrollViewer>
+
+            <!--</ScrollViewer>-->
+            <my:BannerHeader Height="50" Margin="23,21,23,0" x:Name="Banner1" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Window>

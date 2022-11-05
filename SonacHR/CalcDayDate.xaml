@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="CalcDayDate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="290" d:DesignWidth="603">
+    <Grid Background="{DynamicResource Bg}">
+        <Grid Name="GG" Margin="13,19,14,59">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FF6DD9FF" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="To Date" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="137,105,319,79" x:Name="lblToDate" UseLayoutRounding="True" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <DatePicker FirstDayOfWeek="Saturday" Height="28" Margin="263,105,184,79" x:Name="ToDate" TabIndex="4" Width="129" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Grid>
+        <Button Content="Calculate" HorizontalAlignment="Center"  Name="Button2" TabIndex="20" VerticalAlignment="Bottom" Width="380" Margin="12,0,12,9" Style="{StaticResource GlossyCloseButton}" Height="44" Foreground="Black" Background="{DynamicResource BgSave}"/>
+    </Grid>
+</UserControl>

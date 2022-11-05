@@ -1,0 +1,31 @@
+﻿<Window x:Class="MSGNo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Alert" Height="225" Width="579" WindowStartupLocation="CenterScreen" WindowStyle="None" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold">
+    <Grid>
+        <Grid Background="{DynamicResource Bg}" Margin="0">
+            <Label FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center" Margin="12,12,12,53" VerticalAlignment="Stretch" VerticalContentAlignment="Center">
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#FF6DD9FF" Offset="1" />
+                    </LinearGradientBrush>
+                </Label.Background>
+                <Label.Content>
+                    <AccessText TextWrapping="Wrap" Name="lblMSG" />
+                </Label.Content>
+            </Label>
+            <Button Content="Yes" HorizontalAlignment="Right" HorizontalContentAlignment="Center" IsCancel="False" Margin="0,0,12,6" Name="btnYes" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Width="87" Background="{DynamicResource BgSave}"/>
+            <Button Content="No" HorizontalAlignment="Right" HorizontalContentAlignment="Center" IsCancel="True"  Margin="0,0,105,6" Name="btnNo" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Width="87" Background="{DynamicResource BgNew}"/>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="المبلغ" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" x:Name="lblCashValue" UseLayoutRounding="True" Width="71" Margin="0,0,121,57" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="16" />
+            <TextBox AutoWordSelection="True" Height="28" MaxLength="1000" x:Name="CashValue" TabIndex="16" Width="99" Margin="0,0,16,57" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontSize="16">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,326 @@
+﻿<UserControl x:Class="Employees"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d:DesignHeight="622.701" d:DesignWidth="1102.902" 
+             mc:Ignorable="d" xmlns:my1="clr-namespace:WpfApplication1">
+    <Grid Background="{DynamicResource Bg}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
+        <Grid VerticalAlignment="Stretch" Margin="11,11,11,86">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FF6DD9FF" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBox Height="28" Margin="146,10,0,488" Name="txtID" Width="78" MaxLength="10" TabIndex="0" AutoWordSelection="True" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox Height="28" Margin="146,38,0,460" Name="ArName" Width="398" MaxLength="100" TabIndex="1" AutoWordSelection="True" HorizontalAlignment="Left" VerticalAlignment="Center" FlowDirection="RightToLeft">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="Id" Height="28" HorizontalContentAlignment="Center" Margin="12,10,0,488" Name="lblId" UseLayoutRounding="True" Width="124" BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Aribic Name" Height="28" HorizontalContentAlignment="Center" Margin="12,38,0,460" Name="lblArName" UseLayoutRounding="True" Width="124" BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <Label Content="Address" Height="28" HorizontalContentAlignment="Center" Margin="12,98,0,400" Name="lblAddress" UseLayoutRounding="True" Width="124"  BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,98,0,400" MaxLength="1000" Name="Address" TabIndex="3" Width="398" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Content="Mobile" Height="28" HorizontalContentAlignment="Center" Margin="294,126,0,372" Name="lblMobile" UseLayoutRounding="True" Width="100"  BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+            <TextBox AutoWordSelection="True" Height="28" Margin="401,126,0,372" MaxLength="100" Name="Mobile" TabIndex="5" Width="143" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Image Height="144" Name="Image1" Stretch="Fill" Width="163" HorizontalAlignment="Left" VerticalAlignment="Center" Source="/SonacHR;component/Images/no.photo.gif" Margin="556,36,0,286" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Notes" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,289,0,209" Name="lblNotes" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,289,0,209" MaxLength="1000" Name="Notes" TabIndex="11" Width="398" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Tel" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,126,0,372" Name="lblTel" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,126,0,372" MaxLength="1000" Name="HomePhone" TabIndex="4" Width="144" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="E-mail" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,256,0,242" Name="lblEmail" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,256,0,242" MaxLength="1000" Name="Email" TabIndex="10" Width="398" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Birth Date" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,322,0,176" Name="lblDateOfBirth" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <DatePicker Height="28" Margin="146,324,0,174" Name="DateOfBirth" Width="130" FirstDayOfWeek="Saturday" HorizontalAlignment="Left" VerticalAlignment="Center" TabIndex="12" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Hiring Date" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,352,0,146" Name="lblHiringDate" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <DatePicker Height="28" Name="HiringDate" Width="130" FirstDayOfWeek="Saturday" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="146,352,0,146" TabIndex="16" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="National ID" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,156,0,342" Name="lblNationalID" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,156,0,342" MaxLength="1000" Name="NationalId" TabIndex="6" Width="144" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,68,0,430" MaxLength="100" Name="EnName" TabIndex="2" Width="398" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="English Name" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,68,0,430" Name="lblEnName" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Password" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="294,156,0,342" Name="lblPassword" UseLayoutRounding="True" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <PasswordBox   Height="28" Margin="401,156,0,342" MaxLength="1000" Name="Password" TabIndex="7" Width="143" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <PasswordBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="228,185,0,313" MaxLength="100" Name="LevelName" TabIndex="1" Width="316" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="Security Level" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,185,0,313" Name="lblLevelId" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,185,0,313" MaxLength="10" Name="LevelId" TabIndex="8" Width="78" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <CheckBox Content="Stopped" Height="16" HorizontalAlignment="Left" Name="Stopped" TabIndex="18" VerticalAlignment="Center" Width="101" Margin="389,352,0,158" />
+            <CheckBox Content="System User" Height="16" HorizontalAlignment="Left" Name="SystemUser" TabIndex="17" VerticalAlignment="Center" Width="101" Margin="284,352,0,158" />
+            <Button Content="Change" HorizontalAlignment="Left"  Name="btnSetImage" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="723,91,0,354" Background="{DynamicResource BgSave}" Height="38" IsTabStop="False" RenderTransformOrigin="1.102,0.618"/>
+            <Button Content="Cancel" HorizontalAlignment="Left"  Name="btnSetNoImage" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="723,135,0,310" Background="{DynamicResource BgDelete}" Height="38" IsTabStop="False"/>
+            <TabControl x:Name="TabControl1" Margin="601,0,10,4"  VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="True" Height="250" >
+                <TabItem Header="بيانات المرتب" x:Name="TabItemSalary"  >
+                    <Grid Background="{DynamicResource Bg}">
+                        <Grid Margin="5,5,5,5">
+                            <Grid.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0" />
+                                    <GradientStop Color="#FF6DD9FF" Offset="1" />
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                            <WindowsFormsHost Margin="0,0,0,0" x:Name="WFH" Background="{x:Null}" TabIndex="23"/>
+                        </Grid>
+                    </Grid>
+
+                </TabItem>
+                <TabItem Header="بيانات أخرى" x:Name="TabItem2"  >
+                    <Grid Background="{DynamicResource Bg}">
+                        <Grid Margin="5,5,5,5">
+                            <Grid.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="White" Offset="0" />
+                                    <GradientStop Color="#FF6DD9FF" Offset="1" />
+                                </LinearGradientBrush>
+                            </Grid.Background>
+                            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="217,-8,0,118" MaxLength="100" x:Name="CountryName" TabIndex="1" Width="230" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+                            <Label BorderBrush="#FF078200" BorderThickness="1" Content="الدولة" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="6,-8,0,118" x:Name="lblLevelId_Copy3" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                            <TextBox AutoWordSelection="True" Height="28" Margin="135,-8,0,118" MaxLength="10" x:Name="CountryId" TabIndex="8" Width="78" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="217,60,0,121" MaxLength="100" x:Name="QualificationName" TabIndex="1" Width="230" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+                            <Label BorderBrush="#FF078200" BorderThickness="1" Content="المؤهل" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="6,24,0,86" x:Name="lblLevelId_Copy5" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                            <TextBox AutoWordSelection="True" Height="28" Margin="135,24,0,86" MaxLength="10" x:Name="QualificationId" TabIndex="8" Width="78" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="217,58,0,52" MaxLength="100" x:Name="GenderName" TabIndex="1" Width="230" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+                            <Label BorderBrush="#FF078200" BorderThickness="1" Content="النوع" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="6,58,0,52" x:Name="lblLevelId_Copy6" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                            <TextBox AutoWordSelection="True" Height="28" Margin="135,58,0,52" MaxLength="10" x:Name="GenderId" TabIndex="8" Width="78" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+                            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="217,90,0,20" MaxLength="100" x:Name="RegionName" TabIndex="1" Width="230" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+                            <Label BorderBrush="#FF078200" BorderThickness="1" Content="الديانة" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="6,90,0,20" x:Name="lblLevelId_Copy7" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+                            <TextBox AutoWordSelection="True" Height="28" Margin="135,90,0,20" MaxLength="10" x:Name="RegionId" TabIndex="8" Width="78" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                <TextBox.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="White" Offset="0" />
+                                        <GradientStop Color="#37FFFF00" Offset="1" />
+                                    </LinearGradientBrush>
+                                </TextBox.Background>
+                            </TextBox>
+
+                        </Grid>
+                    </Grid>
+
+                </TabItem>
+
+            </TabControl>
+            <CheckBox Content="Manager" Height="16" HorizontalAlignment="Left" x:Name="Manager" TabIndex="19" VerticalAlignment="Center" Width="101" Margin="495,352,0,158" />
+            <CheckBox Content="مندوب" Height="16" HorizontalAlignment="Left" x:Name="Waiter" TabIndex="13" VerticalAlignment="Center" Width="120" Margin="284,375,0,101" Visibility="Hidden"/>
+            <Label Content="BADGENUMBER" Height="28" HorizontalContentAlignment="Center" Margin="294,10,0,488" x:Name="lblBADGENUMBER" UseLayoutRounding="True" Width="100"  BorderThickness="1" BorderBrush="#FF078200" Foreground="#FF078200" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox AutoWordSelection="True" Height="28" Margin="401,10,0,488" MaxLength="100" x:Name="BADGENUMBER" TabIndex="5" Width="143" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <CheckBox Content="استخراج التقارير" Height="16" HorizontalAlignment="Left" x:Name="UserCanRptExportButton" TabIndex="17" VerticalAlignment="Center" Width="101" Margin="284,388,0,122" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="الرقم التأميني" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,448,0,50" x:Name="lblLevelId_Copy" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,448,0,50" MaxLength="10" x:Name="InsNo" TabIndex="8" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="تاريخ الخروج" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,383,0,115" x:Name="lblHiringDate_Copy" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <DatePicker Height="28" x:Name="ExitDate" Width="130" FirstDayOfWeek="Saturday" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="146,383,0,115" TabIndex="16" />
+            <CheckBox Content="عمالة مؤقتة" Height="16" HorizontalAlignment="Left" x:Name="IsTemp" TabIndex="17" VerticalAlignment="Center" Width="101" Margin="390,388,0,122" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="تاريخ المعاش" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,416,0,82" x:Name="lblHiringDate_Copy1" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <DatePicker Height="28" x:Name="PensionDate" Width="130" FirstDayOfWeek="Saturday" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="146,416,0,82" TabIndex="16" />
+            <DatePicker Height="28" x:Name="PensionDate2" Width="130" FirstDayOfWeek="Saturday" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="397,416,0,82" TabIndex="16" />
+            <CheckBox Content="تجديد سن المعاش" Height="16" HorizontalAlignment="Left" x:Name="IsPensionDate" TabIndex="17" VerticalAlignment="Center" Width="110" Margin="284,423,0,87" />
+            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="228,218,0,280" MaxLength="100" x:Name="CompanyName" TabIndex="1" Width="316" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="الشركة" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,218,0,280" x:Name="lblLevelId_Copy1" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,218,0,280" MaxLength="10" x:Name="CompanyId" TabIndex="8" Width="78" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TreeView FlowDirection="RightToLeft" Height="150" HorizontalAlignment="Right" Margin="0,10,8,0" x:Name="TreeView1" VerticalAlignment="Top" Width="246" />
+            <Button Content="Attach" HorizontalAlignment="Right" Margin="0,166,150,0" x:Name="btnAttach" TabIndex="3" VerticalAlignment="Top" Width="105" IsTabStop="False" Background="{DynamicResource BgSave}"/>
+            <Button Content="Download" HorizontalAlignment="Right" Margin="0,165,81,0" x:Name="btnDownload" TabIndex="4" VerticalAlignment="Top" Width="64" IsTabStop="False" Background="{DynamicResource BgNew}"/>
+            <Button Content="Delete" HorizontalAlignment="Right" Margin="0,165,10,0" x:Name="btnDeleteFile" TabIndex="5" VerticalAlignment="Top" Width="64" IsTabStop="False" Background="{DynamicResource BgDelete}"/>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="منحة الغلاء" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="280,448,0,50" x:Name="lblLevelId_Copy2" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="414,448,0,50" MaxLength="10" x:Name="Menha" TabIndex="8" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <CheckBox Content="سهرة أولي" Height="16" HorizontalAlignment="Left" x:Name="IsShift1" TabIndex="17" VerticalAlignment="Center" Width="101" Margin="496,388,0,122" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="حضور" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="12,481,0,17" x:Name="lblLevelId_Copy4" UseLayoutRounding="True" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="146,481,0,17" MaxLength="10" x:Name="LoginTime" TabIndex="8" Width="76" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="انصراف" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="230,481,0,17" x:Name="lblLevelId_Copy8" UseLayoutRounding="True" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="320,481,0,17" MaxLength="10" x:Name="LogoutTime" TabIndex="8" Width="76" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="إضافي" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="405,481,0,17" x:Name="lblLevelId_Copy9" UseLayoutRounding="True" Width="82" HorizontalAlignment="Left" VerticalAlignment="Center"  />
+            <TextBox AutoWordSelection="True" Height="28" Margin="495,481,0,17" MaxLength="10" x:Name="Shift1" TabIndex="8" Width="76" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+        </Grid>
+        <Button Content="First" HorizontalAlignment="Center"  Margin="385,0,636,3" Name="btnFirst" TabIndex="36" VerticalAlignment="Bottom" Width="82" Background="{DynamicResource BgSave}" IsTabStop="False" />
+        <Button Content="Previous" HorizontalAlignment="Center"  Margin="473,0,548,3" Name="btnPrevios" TabIndex="37" VerticalAlignment="Bottom" Width="82" Background="{DynamicResource BgSave}" IsTabStop="False" />
+        <Button Content="Next" HorizontalAlignment="Center"  Margin="562,0,459,3" Name="btnNext" TabIndex="38" VerticalAlignment="Bottom" Width="82" Background="{DynamicResource BgSave}" IsTabStop="False" />
+        <Button Content="Last" HorizontalAlignment="Center"  Margin="650,0,371,3" Name="btnLast" TabIndex="39" VerticalAlignment="Bottom" Width="82" Background="{DynamicResource BgSave}" IsTabStop="False" />
+        <Button Content="Save"  Margin="385,0,548,43" Name="btnSave" TabIndex="34" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="170" Background="{DynamicResource BgSave}" IsTabStop="False"/>
+        <Button Content="New" HorizontalAlignment="Center"  Margin="562,0,459,43" Name="btnNew" TabIndex="35" VerticalAlignment="Bottom" Width="82" Background="{DynamicResource BgNew}" IsTabStop="False"/>
+        <Button Content="Delete"  Margin="650,0,371,43" Name="btnDelete" TabIndex="35" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="82" Background="{DynamicResource BgDelete}" IsTabStop="False"/>
+    </Grid>
+</UserControl>

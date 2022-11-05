@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="MyImages"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="474.933" d:DesignWidth="854.438">
+    <Grid Background="{DynamicResource Bg}">
+        <Grid Name="GridBackground" Margin="12,12,12,53">
+            <Grid.Background>
+                <ImageBrush x:Name="Img" ImageSource="Images/surgey.jpg"/>
+            </Grid.Background>
+            <CheckBox Content="مخزن وهمى" Height="16" HorizontalAlignment="Center" Margin="217,147,317,63" Name="CheckBox1" VerticalAlignment="Center" Visibility="Hidden"  Width="120" TabIndex="2" />
+            <Image Height="119" HorizontalAlignment="Center" Margin="455,19,99,53" Name="Image1" Source="/SonacHR;component/Images/no.photo.gif" Stretch="Fill" VerticalAlignment="Center" Width="100" Visibility="Hidden" />
+            <Button Content="Change" HorizontalAlignment="Center"  Name="btnSetImage" TabIndex="35" VerticalAlignment="Center" Width="82" Visibility="Hidden" Margin="559,40,13,112">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#B4FF0000" Offset="0" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Cancel" HorizontalAlignment="Center"  Name="btnSetNoImage" TabIndex="35" VerticalAlignment="Center" Width="82" Visibility="Hidden" Margin="559,81,13,55">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#B4FF0000" Offset="0" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBox Height="124" HorizontalAlignment="Stretch" Margin="10,10,379,0" x:Name="txtName2" VerticalAlignment="Top" MaxLength="1000" TabIndex="1" AutoWordSelection="True"
+                     AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" 
+                     >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Image Height="126" x:Name="Img1" Stretch="Fill" Width="170" HorizontalAlignment="Right" VerticalAlignment="Center" Source="Images/cancel.png" Margin="0,41,192,243" />
+            <Button Content="Change" HorizontalAlignment="Right" x:Name="btnSetImage_Copy" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,175,280,197" IsTabStop="False" Background="{DynamicResource BgSave}"/>
+            <Button Content="Cancel" HorizontalAlignment="Right" x:Name="btnSetNoImage_Copy" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,175,192,197" IsTabStop="False" Background="{DynamicResource BgDelete}"/>
+            <Image Height="126" x:Name="Img2" Stretch="Fill" Width="170" HorizontalAlignment="Right" VerticalAlignment="Center" Source="Images/cancel.png" Margin="0,41,17,243" />
+            <Button Content="Change" HorizontalAlignment="Right" x:Name="btnSetImage_Copy1" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,176,105,196" IsTabStop="False" Background="{DynamicResource BgSave}"/>
+            <Button Content="Cancel" HorizontalAlignment="Right" x:Name="btnSetNoImage_Copy1" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,175,17,197" IsTabStop="False" Background="{DynamicResource BgDelete}"/>
+            <Image Height="126" x:Name="Img3" Stretch="Fill" Width="170" HorizontalAlignment="Right" VerticalAlignment="Center" Source="Images/cancel.png" Margin="0,219,192,65" />
+            <Button Content="Change" HorizontalAlignment="Right" x:Name="btnSetImage_Copy2" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,353,280,19" IsTabStop="False" Background="{DynamicResource BgSave}"/>
+            <Button Content="Cancel" HorizontalAlignment="Right" x:Name="btnSetNoImage_Copy2" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,353,192,19" IsTabStop="False" Background="{DynamicResource BgDelete}"/>
+            <Image Height="126" x:Name="Img4" Stretch="Fill" Width="170" HorizontalAlignment="Right" VerticalAlignment="Center" Source="Images/cancel.png" Margin="0,219,17,65" />
+            <Button Content="Change" HorizontalAlignment="Right" x:Name="btnSetImage_Copy3" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,354,105,18" IsTabStop="False" Background="{DynamicResource BgSave}"/>
+            <Button Content="Cancel" HorizontalAlignment="Right" x:Name="btnSetNoImage_Copy3" TabIndex="35" VerticalAlignment="Center" Width="82" Margin="0,353,17,19" IsTabStop="False" Background="{DynamicResource BgDelete}"/>
+            <Button Content="Open" HorizontalAlignment="Center" x:Name="btnOpen" TabIndex="35" VerticalAlignment="Top" Width="82" Margin="326,139,422,0" IsTabStop="False" Background="{DynamicResource BgSave}"/>
+        </Grid>
+        <Button Content="Save"  Margin="292,0,392,10" Name="btnSave" TabIndex="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="170" Background="{DynamicResource BgSave}"/>
+        <Button Content="Print"  Margin="467,0,217,10" x:Name="btnPrint" TabIndex="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="170" Background="{DynamicResource BgSave}"/>
+    </Grid>
+</UserControl>

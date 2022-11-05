@@ -1,0 +1,6 @@
+﻿<Window x:Class="MyDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Help" Height="453" Width="522" WindowStartupLocation="CenterScreen" WindowStyle="None" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" TabIndex="0" IsManipulationEnabled="True" SnapsToDevicePixels="True" UseLayoutRounding="True" xmlns:my="clr-namespace:WpfApplication1.EmployeeTracker">
+    
+</Window>

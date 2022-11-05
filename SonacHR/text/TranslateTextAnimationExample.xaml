@@ -1,0 +1,90 @@
+<!--
+// Copyright  Microsoft Corporation.  All Rights Reserved.
+// This code released under the terms of the 
+// Microsoft Public License (MS-PL, http://opensource.org/licenses/ms-pl.html.)    
+-->
+<!-- TranslateTextAnimationExample.xaml
+     Applies an animated TranslateTransform to
+     individual characters.
+-->
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:SampleControls="SampleControls"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+  x:Class="TranslateTextAnimationExample" d:DesignWidth="213" d:DesignHeight="217" Background="{DynamicResource SC}">
+
+    <UserControl.ContextMenu>
+        <ContextMenu x:Name="cm">
+            <MenuItem x:Name="MenuItemHigh" Header="H-High" Tag="0"/>
+            <MenuItem x:Name="MenuItemLow" Header="H-Low" Tag="0"/>
+            <Separator/>
+            <MenuItem x:Name="MenuItemHigh2" Header="V-High" Tag="0"/>
+            <MenuItem x:Name="MenuItemLow2" Header="V-Low" Tag="0"/>
+            <Separator/>
+            <MenuItem x:Name="MenuItem1" Background="{DynamicResource BgNew}" Tag="1"/>
+                <MenuItem x:Name="MenuItem2" Background="{DynamicResource BgSave}" Tag="2"/>
+            <MenuItem x:Name="MenuItem3" Background="{DynamicResource BgDelete}" Tag="3"/>
+            <MenuItem x:Name="MenuItem4" Background="{DynamicResource SC}" Tag="4"/>
+                <MenuItem x:Name="MenuItem5" Background="{DynamicResource Bg}"  Tag="5"/>
+
+            </ContextMenu>
+        </UserControl.ContextMenu>
+    <DockPanel Margin="10">
+        <Viewbox Stretch="Uniform" Name="Viewbox1">
+            <Grid Name="Grid1" Margin="0"
+      Width="{Binding ElementName=RealText, Path=ActualWidth+5}"
+      Height="{Binding ElementName=RealText, Path=ActualWidth}" 
+          >
+
+                <StackPanel Name="StackPanel1" Margin="0"
+                HorizontalAlignment="Center" VerticalAlignment="Center" 
+                >
+                    <Border Name="TextBorder" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"   Margin="0" >
+                        <TextBlock Name="RealText" FontFamily="Times New Roman" FontSize="60 px" Foreground="#FFFFFCBF" Height="{Binding ElementName=Viewbox1, Path=ActualWidth/2}" FontWeight="Thin" FontStretch="Condensed">
+        Windows 7
+                            <TextBlock.TextEffects>
+
+                                <!-- The TextEffect to animate. -->
+                                <TextEffect PositionCount="1" x:Name="MyTextEffect">
+                                    <TextEffect.Transform>
+                                        <TranslateTransform x:Name="TextEffectTranslateTransform"/>
+                                    </TextEffect.Transform>
+                                </TextEffect>
+                             </TextBlock.TextEffects>
+
+                        </TextBlock>
+                    </Border>
+
+                    <!-- Uses a VisualBrush to create a reflection of the animated text. -->
+                    <Rectangle Name="ReflectedText" 
+      Height="{Binding ElementName=TextBorder, Path=ActualHeight}"
+      Width="{Binding ElementName=TextBorder, Path=ActualWidth}">
+                        <Rectangle.OpacityMask>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Offset="0.0" Color="#66000000" />
+                                    <GradientStop Offset="1.0" Color="#00000000" />
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Rectangle.OpacityMask>
+                        <Rectangle.Fill>
+                            <VisualBrush 
+          Visual="{Binding ElementName=TextBorder}">
+                                <VisualBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="1" ScaleY="-1" />
+                                        <TranslateTransform Y="1"  />
+                                    </TransformGroup>
+                                </VisualBrush.RelativeTransform>
+                            </VisualBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                </StackPanel>
+            
+        </Grid>
+        </Viewbox>
+    </DockPanel>
+
+
+</UserControl>
